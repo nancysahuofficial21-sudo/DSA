@@ -5,7 +5,7 @@ class Solution:
         for i in range(len(nums)):
             complement = target - nums[i]
             if complement in seen:
-                c=[nums.index(complement),i]
+                c=[seen[complement],i]
 
             seen[nums[i]]=i
         return c 
