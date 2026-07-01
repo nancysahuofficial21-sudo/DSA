@@ -6,5 +6,5 @@ class Solution:
             nums.remove(i)
         else:
             seen.append(i)
-       return len(seen)
+       return len(set(nums))
           
