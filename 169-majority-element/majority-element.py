@@ -4,8 +4,6 @@ class Solution:
         seen=defaultdict(int)
         for num in nums:
             seen[num]+=1
-        print(seen)
-        
         for key in seen:
             if seen[key]>len(nums)//2:
                 return key
