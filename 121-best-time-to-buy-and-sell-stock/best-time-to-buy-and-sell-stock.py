@@ -1,10 +1,16 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        maxprofit=0
-        dp=[0]*len(prices)
-        dp=prices.copy()
-        for i in range(1,len(prices)):
-            dp[i]=min(dp[i-1],prices[i])
-        for j in range(1,len(prices)):
-            maxprofit=max(maxprofit, prices[j]-dp[j])
-        return maxprofit
+        ans, max, min = 0, prices[0], prices[0]
+        for p in prices:
+            if p < min:
+                if max - min > ans:
+                    ans = max - min
+                min = p
+                max = p
+            elif p > max:
+                max = p
+        
+        return ans if max - min < ans else max - min
+        
+        
+        
