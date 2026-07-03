@@ -1,16 +1,17 @@
+from typing import List
+
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        ans, max, min = 0, prices[0], prices[0]
-        for p in prices:
-            if p < min:
-                if max - min > ans:
-                    ans = max - min
-                min = p
-                max = p
-            elif p > max:
-                max = p
+        # Initialize the lowest price to infinity 
+        min_price = float('inf')
+        max_profit = 0
         
-        return ans if max - min < ans else max - min
-        
-        
-        
+        for price in prices:
+            # 1. Update the lowest buying price seen so far
+            if price < min_price:
+                min_price = price
+            # 2. Else, check if selling today yields a higher profit
+            elif price - min_price > max_profit:
+                max_profit = price - min_price
+                
+        return max_profit
