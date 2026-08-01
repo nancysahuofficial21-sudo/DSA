@@ -5,8 +5,8 @@ class Solution:
         for i in range(1,len(prices)):
             if prices[i]<minprice:
                 minprice=prices[i]
-            else:
-                maxprofit=max(maxprofit,prices[i]-minprice)
+            if prices[i]-minprice>maxprofit:
+                maxprofit=prices[i]-minprice
             
         return maxprofit
         
