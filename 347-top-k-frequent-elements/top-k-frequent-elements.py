@@ -4,7 +4,4 @@ class Solution:
         for i in nums:
             di[i]=di.get(i,0)+1
         dis= sorted(di.items(),key= lambda x: x[1], reverse=True)
-        res=[]
-        for i in dis[:k]:
-            res.append(i[0])
-        return res
+        return [i[0] for i in dis[:k]]
