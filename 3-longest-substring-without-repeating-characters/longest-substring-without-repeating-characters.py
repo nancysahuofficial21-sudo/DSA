@@ -8,5 +8,6 @@ class Solution:
                 seen.remove(s[l])
                 l+=1
             seen.add(s[i]) 
-            ml=max(ml,i-l+1)
+            if ml< i-l+1:
+                ml=i-l+1
         return ml     
