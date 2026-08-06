@@ -5,7 +5,8 @@ class Solution:
         i=0
         while i+k<len(nums):
             sas=sas-nums[i]+nums[i+k]
-            maxavg=max(maxavg,sas)
+            if sas>maxavg:
+                maxavg=sas
             i+=1
         return maxavg/k
         
