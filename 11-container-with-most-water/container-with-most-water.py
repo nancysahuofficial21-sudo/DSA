@@ -3,8 +3,12 @@ class Solution:
         l=0
         r=len(height)-1
         maxarea=0
+        maxHeight=max(height)
         while l<r:
             maxarea=max(maxarea, (r-l)*min(height[l],height[r]))
+            if maxarea > maxHeight*(r-l):
+                return maxarea
+
             if height[l]<height[r]:
                 l+=1
             else:
