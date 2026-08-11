@@ -7,10 +7,7 @@ class Solution:
                 continue
             if nums[i]>0:
                 break
-            if nums[i]+nums[i+1]+nums[i+2]>0:
-                break
-            if nums[i]+nums[-2]+nums[-1]<0:
-                continue        
+            
             j=i+1
             k=len(nums)-1
             while j<k:
