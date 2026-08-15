@@ -11,6 +11,6 @@ class Solution:
                     del dic[fruits[left]]
                 left+=1
             maxlen=max(maxlen, ri-left+1)
-            print(dic)
+            
         return len(fruits) if maxlen==-float('inf') else maxlen
         
