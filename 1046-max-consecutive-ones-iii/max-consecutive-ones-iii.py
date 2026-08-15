@@ -4,7 +4,6 @@ class Solution:
         dic={}
         maxlen=0
         for ri in range(len(nums)):
-            
             dic[nums[ri]]=dic.get(nums[ri],0)+1
             while nums[ri]==0 and dic[nums[ri]]>k:
                 dic[nums[left]]-=1
