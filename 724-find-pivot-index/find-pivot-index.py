@@ -8,14 +8,10 @@ class Solution:
             sumleft.append(sumleft[i]+nums[i])
         for k in range(1,len(nums)):
             sumri.append(sumri[k-1]-nums[k])
-
-        print(sumleft)
-        print(sumri)
         j=0
         while j<len(sumleft) and j<len(sumri):
             if sumleft[j]==sumri[j]:
                 return j
             j+=1
-       
         return -1
         
