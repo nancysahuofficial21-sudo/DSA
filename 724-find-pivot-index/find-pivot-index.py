@@ -10,7 +10,5 @@ class Solution:
             if sumleft[j]==sumri[j]:
                 return j
             j+=1
-        print(sumleft)
-        print(sumri)
         return -1
         
