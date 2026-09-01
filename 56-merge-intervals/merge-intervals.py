@@ -9,8 +9,6 @@ class Solution:
                 pass
             elif res[-1][1]>=intervals[i][0]:
                 res[-1][1]=intervals[i][1]
-           
-                
             else:
                 res.append(intervals[i])
         return res
